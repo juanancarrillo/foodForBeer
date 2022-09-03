@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>Food List</h1>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <input type="text" class="form-control" name="filterFood" placeholder="Start typing to look for food..." [(ngModel)]="filterFood">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Food</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let food of aux | filter:filterFood">
+                <td>{{food}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </div>
